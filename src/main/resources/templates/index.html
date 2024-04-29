@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bus Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .box {
+            width: 420px;
+            height: auto;
+            border: 2px solid #ccc;
+            margin: 30px;
+            padding: 10px;
+            float: left;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        p {
+            color: #666;
+        }
+        progress {
+            width: 100%;
+            height: 20px;
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f9f9f9;
+        }
+        .checked {
+            color: orange;
+        }
+        .box:hover {
+            transform: scale(1.1);
+        }
+        .buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .button1, .button2 {
+            background-color: #4CAF50;
+            border-radius: 2px;
+            border-style: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+         <a class="button1" href="/adminlogin">Admin Login</a>
+    <a class="button2" href="/booking">Book Now</a>
+      </div>
+   
+    <h1>Bus Details</h1>
+    
+    <div class="box">
+        <h2>GSR Tours</h2>
+        <img th:src="@{/images/bus1.jpg}">
+
+        <p>Capacity : 50<br>AC : Available<br>
+        <h3>Star Rating</h3>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        
+    </div>
+
+    <div class="box">
+        <h2>TAT</h2>
+        <img th:src="@{/images/TAT.JPG}">
+        <p>Capacity : 40<br>AC : Available<br>
+        <h3>Star Rating</h3>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        
+    </div>
+
+    <div class="box">
+        <h2>PKR</h2>
+        <img th:src="@{/images/bus3.png}">
+        <p>Capacity : 40<br>AC : Available<br>
+        <h3>Star Rating</h3>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        
+    </div>
+
+    <div class="box">
+        <h2>INDIA tours</h2>
+        <img th:src="@{/images/bus4.jpg}">
+        <p>Capacity : 50<br>AC : Available<br>
+        <h3>Star Rating</h3>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        
+    </div>
+
+    <div class="box">
+        <h2>Varun Bus</h2>
+        <img th:src="@{/images/bus5.jpg}">
+        <p>Capacity : 48<br>AC : Available<br>
+        <h3>Star Rating</h3>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+
+    </div>
+
+    <div class="box">
+        <h2>City travels</h2>
+        <img th:src="@{/images/city.png}">
+        <p>Capacity : 60<br>AC : Available<br>
+        <h3>Star Rating</h3>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+    </div>
+</body>
+</html>

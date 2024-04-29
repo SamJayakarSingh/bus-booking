@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>place</th>
+                <th>Attendees</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Bus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the events and display them in the table -->
+            <tr th:each="event : ${events}">
+                <td th:text="${event.name}"></td>
+                <td th:text="${event.attendees}"></td>
+                <td th:text="${event.date}"></td>
+                <td th:text="${event.time}"></td>
+                <td th:text="${event.hall}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
